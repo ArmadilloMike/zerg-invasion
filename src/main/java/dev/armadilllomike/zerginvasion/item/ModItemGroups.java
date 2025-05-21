@@ -12,18 +12,18 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup TEST_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(ZergInvasion.MOD_ID, "pink_garnet_items"),
+            Identifier.of(ZergInvasion.MOD_ID, "test_items"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.TEST_ITEM))
-                    .displayName(Text.translatable("itemgroup.ZergInvasion.pink_garnet_items"))
+                    .displayName(Text.translatable("itemgroup.ZergInvasion.test_items_group"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.TEST_ITEM);
                     }).build());
 
     private static Object ModBlocks;
     public static final ItemGroup TEST_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(ZergInvasion.MOD_ID, "pink_garnet_blocks"),
+            Identifier.of(ZergInvasion.MOD_ID, "test_blocks"),
             FabricItemGroup.builder().icon(() -> new ItemStack(dev.armadilllomike.zerginvasion.block.ModBlocks.TEST_BLOCK))
-                    .displayName(Text.translatable("itemgroup.ZergInvasion.pink_garnet_blocks"))
+                    .displayName(Text.translatable("itemgroup.ZergInvasion.test_block_group"))
                     .entries((displayContext, entries) -> {
                         entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.TEST_BLOCK);
                     }).build());

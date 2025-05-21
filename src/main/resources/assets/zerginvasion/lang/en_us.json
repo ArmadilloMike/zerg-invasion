@@ -1,4 +1,6 @@
 {
   "item.zerginvasion.test_item": "Test Item",
-  "block.zerginvasion.test_block": "Test Block"
+  "block.zerginvasion.test_block": "Test Block",
+  "itemgroup.ZergInvasion.test_block_group": "Test Blocks",
+  "itemgroup.ZergInvasion.test_items_group": "Test Items"
 }
