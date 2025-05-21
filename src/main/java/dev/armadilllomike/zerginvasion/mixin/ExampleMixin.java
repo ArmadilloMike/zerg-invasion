@@ -1,4 +1,4 @@
-package dev.arnadilllomike.zerginvasion.mixin;
+package dev.armadilllomike.zerginvasion.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

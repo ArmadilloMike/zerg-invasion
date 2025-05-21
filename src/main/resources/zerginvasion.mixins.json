@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "dev.arnadilllomike.zerginvasion.mixin",
+	"package": "dev.armadilllomike.zerginvasion.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ExampleMixin"

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "zerginvasion:block/test_block"
+    }
+  }
+}

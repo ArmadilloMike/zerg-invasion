@@ -11,18 +11,18 @@
 		"homepage": "https://armadillomike.dev",
 		"sources": "https://github.com/armadillomike/zerg-invasion"
 	},
-	"license": "All rights reserved",
+	"license": "MIT",
 	"icon": "assets/zerginvasion/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dev.arnadilllomike.zerginvasion.ZergInvasion"
+			"dev.armadilllomike.zerginvasion.ZergInvasion"
 		],
 		"fabric-datagen": [
-			"dev.arnadilllomike.zerginvasion.ZergInvasionDataGenerator"
+			"dev.armadilllomike.zerginvasion.ZergInvasionDataGenerator"
 		],
 		"client": [
-			"dev.arnadilllomike.zerginvasion.ZergInvasionClient"
+			"dev.armadilllomike.zerginvasion.ZergInvasionClient"
 		]
 	},
 	"mixins": [

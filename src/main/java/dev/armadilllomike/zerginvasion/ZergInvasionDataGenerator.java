@@ -1,4 +1,4 @@
-package dev.arnadilllomike.zerginvasion;
+package dev.armadilllomike.zerginvasion;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

@@ -1,4 +1,4 @@
-package dev.arnadilllomike.zerginvasion;
+package dev.armadilllomike.zerginvasion;
 
 import net.fabricmc.api.ClientModInitializer;
 

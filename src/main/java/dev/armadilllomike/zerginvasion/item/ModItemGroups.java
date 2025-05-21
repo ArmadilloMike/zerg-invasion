@@ -1,0 +1,35 @@
+package dev.armadilllomike.zerginvasion.item;
+
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import dev.armadilllomike.zerginvasion.ZergInvasion;
+import dev.armadilllomike.zerginvasion.block.ModBlocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
+public class ModItemGroups {
+    public static final ItemGroup TEST_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ZergInvasion.MOD_ID, "pink_garnet_items"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.TEST_ITEM))
+                    .displayName(Text.translatable("itemgroup.ZergInvasion.pink_garnet_items"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.TEST_ITEM);
+                    }).build());
+
+    private static Object ModBlocks;
+    public static final ItemGroup TEST_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ZergInvasion.MOD_ID, "pink_garnet_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(dev.armadilllomike.zerginvasion.block.ModBlocks.TEST_BLOCK))
+                    .displayName(Text.translatable("itemgroup.ZergInvasion.pink_garnet_blocks"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.TEST_BLOCK);
+                    }).build());
+
+
+    public static void registerItemGroups() {
+        ZergInvasion.LOGGER.info("Registering Item Groups for " + ZergInvasion.MOD_ID);
+    }
+}
