@@ -2,5 +2,9 @@
   "item.zerginvasion.test_item": "Test Item",
   "block.zerginvasion.test_block": "Test Block",
   "itemgroup.ZergInvasion.test_block_group": "Test Blocks",
-  "itemgroup.ZergInvasion.test_items_group": "Test Items"
+  "itemgroup.ZergInvasion.test_items_group": "Test Items",
+  "block.zerginvasion.spreading_block": "Spreading",
+  "block.zerginvasion.spreading_block_variant": "Spreading Block Type #1",
+  "itemgroup.ZergInvasion.spreading_block_group": "Spreading Blocks",
+  "itemgroup.ZergInvasion.infested_block_group": "Infested Blocks"
 }

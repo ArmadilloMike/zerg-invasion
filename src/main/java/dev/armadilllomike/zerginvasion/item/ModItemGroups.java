@@ -27,6 +27,21 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.TEST_BLOCK);
                     }).build());
+    public static final ItemGroup SPREADING_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ZergInvasion.MOD_ID, "spreading_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(dev.armadilllomike.zerginvasion.block.ModBlocks.SPREADING_BLOCK))
+                    .displayName(Text.translatable("itemgroup.ZergInvasion.spreading_block_group"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.SPREADING_BLOCK);
+                        entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.SPREADING_BLOCK_VARIANT);
+                    }).build());
+    public static final ItemGroup INFESTED_BLOCK_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ZergInvasion.MOD_ID, "infested_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(dev.armadilllomike.zerginvasion.block.ModBlocks.SPREADING_BLOCK))
+                    .displayName(Text.translatable("itemgroup.ZergInvasion.infested_block_group"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.ZERG_INFESTED_ACACIA_LOG);
+                    }).build());
 
 
     public static void registerItemGroups() {
