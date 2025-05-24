@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "zerginvasion:item/multi_block_placer"
+  }
+}

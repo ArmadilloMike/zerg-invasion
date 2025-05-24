@@ -6,5 +6,7 @@
   "block.zerginvasion.spreading_block": "Spreading",
   "block.zerginvasion.spreading_block_variant": "Spreading Block Type #1",
   "itemgroup.ZergInvasion.spreading_block_group": "Spreading Blocks",
-  "itemgroup.ZergInvasion.infested_block_group": "Infested Blocks"
+  "itemgroup.ZergInvasion.infested_block_group": "Infested Blocks",
+  "block.zerginvasion.zerg_infested_acacia_log": "Infested Acacia Log",
+  "item.zerginvasion.multi_block_placer": "Multi Block Placer",
 }

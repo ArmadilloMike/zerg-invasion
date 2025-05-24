@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "up": "zerginvasion:block/zerg_infested_acacia_log_top",
+    "down": "zerginvasion:block/zerg_infested_acacia_log_top",
+    "north": "zerginvasion:block/zerg_infested_acacia_log",
+    "south": "zerginvasion:block/zerg_infested_acacia_log",
+    "west": "zerginvasion:block/zerg_infested_acacia_log",
+    "east": "zerginvasion:block/zerg_infested_acacia_log",
+    "particle": "zerginvasion:block/zerg_infested_acacia_log"
+  }
+}
