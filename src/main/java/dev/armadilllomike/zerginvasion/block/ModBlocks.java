@@ -23,7 +23,7 @@ public class ModBlocks {
     public static final Block SPREADING_BLOCK_VARIANT = registerBlock("spreading_block_variant",
             new SpreadingBlock(AbstractBlock.Settings.create().strength(2f).requiresTool(), TEST_BLOCK));
 
-    public static final Block ZERG_INFESTED_ACACIA_LOG = registerBlock("zerg_infested_acacia_log",
+    public static final Block ZERG_INFESTED_LOG = registerBlock("zerg_infested_log",
             new SpreadingBlock(AbstractBlock.Settings.create().strength(2f).requiresTool(), Blocks.ACACIA_LOG));
 
     private static Block registerBlock(String name, Block block) {
@@ -43,8 +43,9 @@ public class ModBlocks {
             fabricItemGroupEntries.add(TEST_BLOCK);
             fabricItemGroupEntries.add(SPREADING_BLOCK);
             fabricItemGroupEntries.add(SPREADING_BLOCK_VARIANT);
-            fabricItemGroupEntries.add(ZERG_INFESTED_ACACIA_LOG);
+            fabricItemGroupEntries.add(ZERG_INFESTED_LOG);
         });
     }
+    //TODO Add custom zerg multi blocks
 }
 

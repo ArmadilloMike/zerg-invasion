@@ -17,17 +17,17 @@ public class ModItems {
             new MultiBlockPlacerItem(new Item.Settings().maxCount(1), new Block[][][] {
                     {
                             {ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK},
-                            {ModBlocks.TEST_BLOCK, null, ModBlocks.TEST_BLOCK},
+                            {ModBlocks.TEST_BLOCK, ModBlocks.ZERG_INFESTED_LOG, ModBlocks.TEST_BLOCK},
                             {ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK}
                     },
                     {
                             {ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK},
-                            {ModBlocks.TEST_BLOCK, ModBlocks.SPREADING_BLOCK, ModBlocks.TEST_BLOCK},
+                            {ModBlocks.TEST_BLOCK, ModBlocks.ZERG_INFESTED_LOG, ModBlocks.TEST_BLOCK},
                             {ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK}
                     },
                     {
                             {ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK},
-                            {ModBlocks.TEST_BLOCK, null, ModBlocks.TEST_BLOCK},
+                            {ModBlocks.TEST_BLOCK, ModBlocks.ZERG_INFESTED_LOG, ModBlocks.TEST_BLOCK},
                             {ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK, ModBlocks.TEST_BLOCK}
                     }
             }));
@@ -39,7 +39,7 @@ public class ModItems {
     public static void registerModItems() {
         ZergInvasion.LOGGER.info("Registering Mod Items for " + ZergInvasion.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SEARCH).register(entries -> {
             entries.add(TEST_ITEM);
             entries.add(MULTI_BLOCK_PLACER);
         });

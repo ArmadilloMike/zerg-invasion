@@ -3,6 +3,7 @@ package dev.armadilllomike.zerginvasion.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.math.BlockPos;
 
 public class MultiBlock {

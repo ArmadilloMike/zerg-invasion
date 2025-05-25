@@ -36,7 +36,7 @@ public class SpreadingBlock extends Block {
                 world.setBlockState(neighborPos, ModBlocks.SPREADING_BLOCK.getDefaultState());
             }
             if (neighborState.isOf(Blocks.ACACIA_LOG)) {
-                world.setBlockState(neighborPos, ModBlocks.ZERG_INFESTED_ACACIA_LOG.getDefaultState());
+                world.setBlockState(neighborPos, ModBlocks.ZERG_INFESTED_LOG.getDefaultState());
             }
         }
 
