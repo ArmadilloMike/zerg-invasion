@@ -4,18 +4,22 @@ import dev.armadilllomike.zerginvasion.ZergInvasion;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ModBlocks {
+    private static final Set<Block> REGISTERED_BLOCKS = new HashSet<>();
+
     public static final Block TEST_BLOCK = registerBlock("test_block",
-            new Block(AbstractBlock.Settings.create().strength(3f)
-                    .requiresTool()));
+            new Block(AbstractBlock.Settings.create().strength(3f).requiresTool()));
 
     public static final Block SPREADING_BLOCK = registerBlock("spreading_block",
             new SpreadingBlock(AbstractBlock.Settings.create().strength(2f).requiresTool(), TEST_BLOCK));
@@ -24,11 +28,27 @@ public class ModBlocks {
             new SpreadingBlock(AbstractBlock.Settings.create().strength(2f).requiresTool(), TEST_BLOCK));
 
     public static final Block ZERG_INFESTED_LOG = registerBlock("zerg_infested_log",
-            new SpreadingBlock(AbstractBlock.Settings.create().strength(2f).requiresTool(), Blocks.ACACIA_LOG));
+            new SpreadingBlock(AbstractBlock.Settings.create().strength(2f).requiresTool(), ModBlocks.SPREADING_BLOCK));
+
+    public static final Block ZERG_INFECTED_LEAVES = registerBlock("zerg_infected_leaves",
+        new ZergInfectedLeavesBlock(AbstractBlock.Settings.create()
+        .strength(0.2f)
+        .ticksRandomly()
+        .sounds(BlockSoundGroup.GRASS)
+        .nonOpaque()
+        .allowsSpawning((state, world, pos, type) -> false)
+        .suffocates((state, world, pos) -> false)
+        .blockVision((state, world, pos) -> false),
+    ModBlocks.ZERG_INFESTED_LOG));
 
     private static Block registerBlock(String name, Block block) {
+        REGISTERED_BLOCKS.add(block); // Track registered blocks
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(ZergInvasion.MOD_ID, name), block);
+    }
+
+    public static boolean isRegisteredBlock(Block block) {
+        return REGISTERED_BLOCKS.contains(block);
     }
 
     private static void registerBlockItem(String name, Block block) {
@@ -44,8 +64,7 @@ public class ModBlocks {
             fabricItemGroupEntries.add(SPREADING_BLOCK);
             fabricItemGroupEntries.add(SPREADING_BLOCK_VARIANT);
             fabricItemGroupEntries.add(ZERG_INFESTED_LOG);
+            fabricItemGroupEntries.add(ZERG_INFECTED_LEAVES);
         });
     }
-    //TODO Add custom zerg multi blocks
 }
-

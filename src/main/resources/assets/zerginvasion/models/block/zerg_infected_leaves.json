@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "zerginvasion:block/zerg_infected_leaves"
+  },
+  "render_type": "cutout_mipped"
+}

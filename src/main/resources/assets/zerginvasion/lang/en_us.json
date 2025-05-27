@@ -9,5 +9,6 @@
   "itemgroup.ZergInvasion.infested_block_group": "Infested Blocks",
   "block.zerginvasion.zerg_infested_log": "Infested Log",
   "item.zerginvasion.multi_block_placer": "Multi Block Placer",
-  "itemgroup.ZergInvasion.multiblock_placers": "Multiblock Placer Items"
+  "itemgroup.ZergInvasion.multiblock_placers": "Multiblock Placer Items",
+    "block.zerginvasion.zerg_infected_leaves": "Infected Leaves"
 }
