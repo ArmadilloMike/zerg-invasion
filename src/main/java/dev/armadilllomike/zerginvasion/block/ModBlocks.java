@@ -30,7 +30,7 @@ public class ModBlocks {
     public static final Block ZERG_INFESTED_LOG = registerBlock("zerg_infested_log",
             new SpreadingBlock(AbstractBlock.Settings.create().strength(2f).requiresTool(), ModBlocks.SPREADING_BLOCK));
 
-    public static final Block ZERG_INFECTED_LEAVES = registerBlock("zerg_infected_leaves",
+    public static final Block ZERG_INFESTED_LEAVES = registerBlock("zerg_infested_leaves",
         new ZergInfectedLeavesBlock(AbstractBlock.Settings.create()
         .strength(0.2f)
         .ticksRandomly()
@@ -40,6 +40,21 @@ public class ModBlocks {
         .suffocates((state, world, pos) -> false)
         .blockVision((state, world, pos) -> false),
     ModBlocks.ZERG_INFESTED_LOG));
+
+    public static final Block ZERG_INFESTED_STONE = registerBlock("zerg_infested_stone",
+            new SpreadingBlock(AbstractBlock.Settings.create().strength(1.5f).requiresTool(), ModBlocks.SPREADING_BLOCK));
+
+    public static final Block ZERG_INFESTED_NETHERRACK = registerBlock("zerg_infested_netherrack",
+            new SpreadingBlock(AbstractBlock.Settings.create().strength(1.5f).requiresTool(), ModBlocks.SPREADING_BLOCK));
+
+    public static final Block ZERG_INFESTED_END_STONE = registerBlock("zerg_infested_end_stone",
+            new SpreadingBlock(AbstractBlock.Settings.create().strength(1.5f).requiresTool(), ModBlocks.SPREADING_BLOCK));
+
+    public static final Block ZERG_INFESTED_DIRT = registerBlock("zerg_infested_dirt",
+            new SpreadingBlock(AbstractBlock.Settings.create().strength(1.5f).requiresTool(), ModBlocks.SPREADING_BLOCK));
+
+    public static final Block ZERG_INFESTED_GRASS = registerBlock("zerg_infested_grass",
+            new SpreadingBlock(AbstractBlock.Settings.create().strength(1.5f).requiresTool(), ModBlocks.SPREADING_BLOCK));
 
     private static Block registerBlock(String name, Block block) {
         REGISTERED_BLOCKS.add(block); // Track registered blocks
@@ -64,7 +79,12 @@ public class ModBlocks {
             fabricItemGroupEntries.add(SPREADING_BLOCK);
             fabricItemGroupEntries.add(SPREADING_BLOCK_VARIANT);
             fabricItemGroupEntries.add(ZERG_INFESTED_LOG);
-            fabricItemGroupEntries.add(ZERG_INFECTED_LEAVES);
+            fabricItemGroupEntries.add(ZERG_INFESTED_LEAVES);
+            fabricItemGroupEntries.add(ZERG_INFESTED_STONE);
+            fabricItemGroupEntries.add(ZERG_INFESTED_NETHERRACK);
+            fabricItemGroupEntries.add(ZERG_INFESTED_END_STONE);
+            fabricItemGroupEntries.add(ZERG_INFESTED_DIRT);
+            fabricItemGroupEntries.add(ZERG_INFESTED_GRASS);
         });
     }
 }

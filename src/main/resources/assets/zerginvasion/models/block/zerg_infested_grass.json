@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/transparent_cube",
+  "textures": {
+    "up": "zerginvasion:block/zerg_infested_grass_top",
+    "north": "zerginvasion:block/zerg_infested_grass_side",
+    "south": "zerginvasion:block/zerg_infested_grass_side",
+    "east": "zerginvasion:block/zerg_infested_grass_side",
+    "west": "zerginvasion:block/zerg_infested_grass_side",
+    "down": "zerginvasion:block/zerg_infested_dirt",
+    "particle": "zerginvasion:block/zerg_infested_grass_top"
+  }
+}

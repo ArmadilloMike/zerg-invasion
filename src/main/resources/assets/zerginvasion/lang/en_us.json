@@ -10,5 +10,10 @@
   "block.zerginvasion.zerg_infested_log": "Infested Log",
   "item.zerginvasion.multi_block_placer": "Multi Block Placer",
   "itemgroup.ZergInvasion.multiblock_placers": "Multiblock Placer Items",
-    "block.zerginvasion.zerg_infected_leaves": "Infected Leaves"
+  "block.zerginvasion.zerg_infested_leaves": "Infested Leaves",
+  "block.zerginvasion.zerg_infested_stone": "Infested Stone",
+  "block.zerginvasion.zerg_infested_netherrack": "Infested Netherrack",
+  "block.zerginvasion.zerg_infested_end_stone": "Infested End Stone",
+  "block.zerginvasion.zerg_infested_dirt": "Infested Dirt",
+  "block.zerginvasion.zerg_infested_grass": "Infested Grass"
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "zerginvasion:block/zerg_infested_stone"
+  }
+}

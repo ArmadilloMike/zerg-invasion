@@ -26,7 +26,10 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.ZergInvasion.infested_block_group"))
                     .entries((displayContext, entries) -> {
                         entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.ZERG_INFESTED_LOG);
-                        entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.ZERG_INFECTED_LEAVES);
+                        entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.ZERG_INFESTED_LEAVES);
+                        entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.ZERG_INFESTED_STONE);
+                        entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.ZERG_INFESTED_NETHERRACK);
+                        entries.add(dev.armadilllomike.zerginvasion.block.ModBlocks.ZERG_INFESTED_END_STONE);
                     }).build());
     public static final ItemGroup MULTIBLOCK_PLACERS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(ZergInvasion.MOD_ID, "multiblock_placers"),

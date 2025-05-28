@@ -32,7 +32,7 @@ public class ZergInfectedLeavesBlock extends LeavesBlock {
                     Block neighborBlock = neighborState.getBlock();
 
                     if (SpreadingBlock.INFECTABLE_LEAVES.contains(neighborBlock)) {
-                        world.setBlockState(mutablePos, ModBlocks.ZERG_INFECTED_LEAVES.getDefaultState()
+                        world.setBlockState(mutablePos, ModBlocks.ZERG_INFESTED_LEAVES.getDefaultState()
                             .with(DISTANCE, state.get(DISTANCE))
                             .with(PERSISTENT, state.get(PERSISTENT)));
                     }

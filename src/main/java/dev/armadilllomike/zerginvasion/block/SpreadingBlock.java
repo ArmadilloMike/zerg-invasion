@@ -36,6 +36,20 @@ public class SpreadingBlock extends TransparentBlock implements SpreadingBlockTr
             Blocks.AZALEA_LEAVES,
             Blocks.FLOWERING_AZALEA_LEAVES
     );
+    static final Set<Block> INFECTABLE_STONE = Set.of(
+            Blocks.STONE,
+            Blocks.GRANITE,
+            Blocks.DIORITE,
+            Blocks.ANDESITE,
+            Blocks.COBBLESTONE,
+            Blocks.MOSSY_COBBLESTONE
+    );
+    static final Set<Block> INFECTABLE_DIRT = Set.of(
+            Blocks.DIRT,
+            Blocks.COARSE_DIRT,
+            Blocks.PODZOL,
+            Blocks.ROOTED_DIRT
+    );
 
     private final Block targetBlock;
 
@@ -61,14 +75,25 @@ public class SpreadingBlock extends TransparentBlock implements SpreadingBlockTr
                     Block neighborBlock = neighborState.getBlock();
 
                     // Replace blocks with the new spreading block variant
-                    if (neighborBlock == Blocks.STONE) {
+                    if (neighborBlock == Blocks.EXPOSED_CHISELED_COPPER) {
                         world.setBlockState(mutablePos, ModBlocks.SPREADING_BLOCK_VARIANT.getDefaultState());
                     } else if ((Objects.equals(ModBlocks.TEST_BLOCK, neighborState.getBlock()))) {
                         world.setBlockState(mutablePos, ModBlocks.SPREADING_BLOCK.getDefaultState());
                     } else if (INFECTABLE_LOGS.contains(neighborBlock)) {
                         world.setBlockState(mutablePos, ModBlocks.ZERG_INFESTED_LOG.getDefaultState());
                     } else if (INFECTABLE_LEAVES.contains(neighborBlock)) {
-                        world.setBlockState(mutablePos, ModBlocks.ZERG_INFECTED_LEAVES.getDefaultState());
+                        world.setBlockState(mutablePos, ModBlocks.ZERG_INFESTED_LEAVES.getDefaultState());
+                    } else if (INFECTABLE_STONE.contains(neighborBlock)) {
+                        world.setBlockState(mutablePos, ModBlocks.ZERG_INFESTED_STONE.getDefaultState());
+                    } else if (neighborBlock == Blocks.NETHERRACK) {
+                        world.setBlockState(mutablePos, ModBlocks.ZERG_INFESTED_NETHERRACK.getDefaultState());
+                    } else if (neighborBlock == Blocks.END_STONE) {
+                        world.setBlockState(mutablePos, ModBlocks.ZERG_INFESTED_END_STONE.getDefaultState());
+                    } else if (INFECTABLE_DIRT.contains(neighborBlock)) {
+                        world.setBlockState(mutablePos, ModBlocks.ZERG_INFESTED_DIRT.getDefaultState());
+                    } else if (neighborBlock == Blocks.GRASS_BLOCK) {
+                        world.setBlockState(mutablePos, ModBlocks.ZERG_INFESTED_GRASS.getDefaultState());
+                        //TODO: Fix the grass texture not being correct
                     }
                 }
             }
